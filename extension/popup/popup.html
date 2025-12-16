@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>EyeMouse Control</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+
+    .status {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .status.active {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .status.inactive {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    button.primary {
+      background: #007bff;
+      color: white;
+    }
+
+    button.primary:hover {
+      background: #0056b3;
+    }
+
+    button.secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    button.secondary:hover {
+      background: #545b62;
+    }
+
+    button.danger {
+      background: #dc3545;
+      color: white;
+    }
+
+    button.danger:hover {
+      background: #c82333;
+    }
+
+    .instructions {
+      font-size: 12px;
+      color: #666;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .instructions h3 {
+      font-size: 14px;
+      margin: 0 0 8px 0;
+    }
+
+    .instructions ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .instructions li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>👁️ EyeMouse</h1>
+
+  <div id="status" class="status inactive">
+    Status: Inactive
+  </div>
+
+  <button id="activateBtn" class="primary">Activate EyeMouse</button>
+  <button id="tuneBtn" class="secondary" style="display: none;">🎯 Tune Model (10 points)</button>
+  <button id="recalibrateBtn" class="secondary" style="display: none;">🔄 Recalibrate (5 points)</button>
+  <button id="deactivateBtn" class="danger" style="display: none;">Deactivate</button>
+
+  <div class="instructions">
+    <h3>How to use:</h3>
+    <ul>
+      <li><strong>Activate:</strong> Click "Activate" or say "Activate EyeMouse"</li>
+      <li><strong>Calibration:</strong> Look at 5 points on screen</li>
+      <li><strong>Move cursor:</strong> Move your eyes</li>
+      <li><strong>Click:</strong> Double blink</li>
+      <li><strong>Tune:</strong> Fine-tune with 10 random points</li>
+      <li><strong>Recalibrate:</strong> Press 'R' or full recalibration</li>
+    </ul>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

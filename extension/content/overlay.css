@@ -1,0 +1,16 @@
+/* EyeMouse overlay styles */
+
+#eyemouse-cursor {
+  transition: left 0.05s ease-out, top 0.05s ease-out;
+}
+
+#eyemouse-highlight {
+  box-sizing: border-box;
+}
+
+/* Ensure cursor is always on top */
+#eyemouse-cursor,
+#eyemouse-status,
+#eyemouse-calibration {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}

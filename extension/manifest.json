@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "EyeMouse - Eye Controlled Mouse",
+  "version": "1.0.0",
+  "description": "Control your mouse with your eyes using 5-point calibration",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/overlay.js"],
+      "css": ["content/overlay.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content/overlay.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
